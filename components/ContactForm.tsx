@@ -11,7 +11,8 @@ const ContactForm: React.FC = () => {
           <form className="w-full lg:w-1/2 space-y-4">
             <input type="text" placeholder="Tên" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1976d1] focus:ring-2 focus:ring-[#1976d1] transition-all duration-300" />
             <input type="tel" placeholder="Số Điện Thoại" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1976d1] focus:ring-2 focus:ring-[#1976d1] transition-all duration-300" />
-            <select className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1976d1] focus:ring-2 focus:ring-[#1976d1] transition-all duration-300">
+            <label htmlFor="service-select" className="sr-only">Chọn Dịch Vụ</label>
+            <select id="service-select" className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-[#1976d1] focus:ring-2 focus:ring-[#1976d1] transition-all duration-300">
               <option>Chọn Dịch Vụ</option>
               <option>Vận chuyển quốc tế</option>
               <option>Vận chuyển nội địa</option>

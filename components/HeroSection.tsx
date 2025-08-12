@@ -17,6 +17,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative w-full h-[300px] sm:h-[400px] lg:h-[600px] overflow-hidden">
+      {/* @ts-ignore */}
       <Carousel
         showThumbs={false}
         infiniteLoop={true}
@@ -35,7 +36,6 @@ const HeroSection: React.FC = () => {
         thumbWidth={100}
         verticalSwipe="standard"
         animationHandler="slide"
-        swipeAnimationHandler="slide"
         labels={{ leftArrow: '', rightArrow: '', item: 'slide item' }}
         onClickItem={() => {}}
         onClickThumb={() => {}}
@@ -43,6 +43,8 @@ const HeroSection: React.FC = () => {
         onSwipeStart={() => {}}
         onSwipeEnd={() => {}}
         onSwipeMove={() => false}
+        swipeAnimationHandler={() => {}}
+        stopSwipingHandler={() => {}}
         renderArrowPrev={(clickHandler, hasPrev) => hasPrev && (
           <button
             type="button"
@@ -76,16 +78,16 @@ const HeroSection: React.FC = () => {
         width="100%"
       >
         <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[600px] bg-cover bg-center bg-[url('/images/hero-1.jpg')]">
-          <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-[20px] sm:top-[60px] lg:top-[103px] left-[20px] sm:left-[100px] lg:left-[180px] font-bold text-white text-xl sm:text-3xl lg:text-6xl tracking-[0] leading-[30px] sm:leading-[50px] lg:leading-[86px] z-30">
-            DỊCH VỤ VẬN CHUYỂN <br /> ĐƯỜNG BIỂN QUỐC TẾ
+          <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center sm:top-[60px] sm:left-[100px] sm:transform-none lg:top-[103px] lg:left-[180px]">
+            <span className="font-bold text-white text-xl sm:text-3xl lg:text-6xl tracking-[0] leading-[30px] sm:leading-[50px] lg:leading-[86px] z-30">DỊCH VỤ VẬN CHUYỂN <br /> ĐƯỜNG BIỂN QUỐC TẾ</span>
           </p>
           <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-[100px] sm:top-[200px] lg:top-[283px] left-[20px] sm:left-[100px] lg:left-[209px] font-inter font-medium text-white text-sm sm:text-lg lg:text-2xl tracking-[0] leading-[20px] sm:leading-[28px] lg:leading-[36px]">
             An Pha Trần là đối tác tin cậy trong vận chuyển đường biển quốc tế, với hơn 1 triệu lô hàng mỗi năm. Chúng tôi mang lại lợi ích vượt trội.
           </p>
         </div>
         <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[600px] bg-cover bg-center bg-[url('/images/hero-2.jpg')]">
-          <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-[20px] sm:top-[60px] lg:top-[103px] left-[20px] sm:left-[100px] lg:left-[180px] font-bold text-white text-xl sm:text-3xl lg:text-6xl tracking-[0] leading-[30px] sm:leading-[50px] lg:leading-[86px] z-30">
-            DỊCH VỤ VẬN CHUYỂN <br /> ĐƯỜNG BIỂN QUỐC TẾ
+          <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center sm:top-[60px] sm:left-[100px] sm:transform-none lg:top-[103px] lg:left-[180px]">
+            <span className="font-bold text-white text-xl sm:text-3xl lg:text-6xl tracking-[0] leading-[30px] sm:leading-[50px] lg:leading-[86px] z-30">DỊCH VỤ VẬN CHUYỂN <br /> ĐƯỜNG BIỂN QUỐC TẾ</span>
           </p>
           <p className="absolute w-[300px] sm:w-[500px] lg:w-[743px] top-[100px] sm:top-[200px] lg:top-[283px] left-[20px] sm:left-[100px] lg:left-[209px] font-inter font-medium text-white text-sm sm:text-lg lg:text-2xl tracking-[0] leading-[20px] sm:leading-[28px] lg:leading-[36px]">
             An Pha Trần là đối tác tin cậy trong vận chuyển đường biển quốc tế, với hơn 1 triệu lô hàng mỗi năm. Chúng tôi mang lại lợi ích vượt trội.

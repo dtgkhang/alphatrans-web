@@ -385,7 +385,9 @@ const ToolsPage: React.FC = () => {
             <>
               <label className="block text-lg font-bold text-[#2c2d3f] mb-4">Tra cứu giá vận chuyển</label>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <label htmlFor="province-select" className="sr-only">Chọn tỉnh</label>
                 <select
+                  id="province-select"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1976d1] transition-all duration-300"
                   value={province}
                   onChange={(e) => setProvince(e.target.value)}
@@ -397,7 +399,9 @@ const ToolsPage: React.FC = () => {
                     </option>
                   ))}
                 </select>
+                <label htmlFor="district-select" className="sr-only">Chọn quận/huyện</label>
                 <select
+                  id="district-select"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1976d1] transition-all duration-300"
                   value={district}
                   onChange={(e) => setDistrict(e.target.value)}
@@ -410,7 +414,9 @@ const ToolsPage: React.FC = () => {
                     </option>
                   ))}
                 </select>
+                <label htmlFor="weight-select" className="sr-only">Chọn trọng tải</label>
                 <select
+                  id="weight-select"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1976d1] transition-all duration-300"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}

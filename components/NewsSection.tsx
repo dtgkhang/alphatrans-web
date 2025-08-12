@@ -75,6 +75,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news }) => {
     <section className="py-12 text-center">
       <h2 className="font-inter text-3xl font-semibold text-[#2c2d3f] px-4">Tin Tức</h2>
       <div className="mt-8 px-4">
+              {/* @ts-ignore */}
         <Carousel
           showThumbs={false}
           infiniteLoop={true}
