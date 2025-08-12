@@ -86,9 +86,8 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news }) => {
           dynamicHeight={false}
           axis="horizontal"
           centerMode={true}
-          centerSlidePercentage={100 / 2} // 50% cho 2 card trên mobile
-          centerSlidePercentage={100 / 4} // 25% cho 4 card trên desktop (lg)
-          preventMovementUntilSwipeScrollTolerance={5}
+          centerSlidePercentage={window.innerWidth >= 1024 ? 100 / 4 : 100 / 1} // Responsive: 25% for desktop, 50% for mobile
+          preventMovementUntilSwipeScrollTolerance={true}
           stopOnHover={true}
           labels={{ leftArrow: '', rightArrow: '', item: 'slide item' }}
           onClickItem={() => {}}
