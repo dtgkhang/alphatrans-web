@@ -85,6 +85,9 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news }) => {
           showIndicators={false}
           dynamicHeight={false}
           axis="horizontal"
+          swipeScrollTolerance={50}
+          verticalSwipe="standard"
+          animationHandler="slide"
           centerMode={true}
           centerSlidePercentage={window.innerWidth >= 1024 ? 100 / 4 : 100 / 1} // Responsive: 25% for desktop, 50% for mobile
           preventMovementUntilSwipeScrollTolerance={true}

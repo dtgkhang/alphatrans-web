@@ -27,6 +27,15 @@ const HeroSection: React.FC = () => {
         axis="horizontal"
         centerMode={false}
         centerSlidePercentage={80}
+        interval={3000}
+        preventMovementUntilSwipeScrollTolerance={false}
+        showIndicators={false}
+        stopOnHover={true}
+        swipeScrollTolerance={5}
+        thumbWidth={100}
+        verticalSwipe="standard"
+        animationHandler="slide"
+        swipeAnimationHandler="slide"
         labels={{ leftArrow: '', rightArrow: '', item: 'slide item' }}
         onClickItem={() => {}}
         onClickThumb={() => {}}
